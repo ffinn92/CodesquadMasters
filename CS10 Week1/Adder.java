@@ -1,6 +1,5 @@
 public class Adder {
     Gate gate = new Gate();
-    private int answerLength;
 
     public boolean[] halfAdder(boolean relayA, boolean relayB) {
         boolean[] answer = new boolean[2];
@@ -32,8 +31,10 @@ public class Adder {
     public boolean[] byteAdder(boolean[] relayA, boolean[] relayB) {
         int length = getAnswerLength(relayA, relayB);
         boolean[] answer = new boolean[length];
+
         boolean[] relayAA = relayConverter(relayA, length);
         boolean[] relayBB = relayConverter(relayB, length);
+
         boolean carry = false;
         boolean[] adder;
 
@@ -43,7 +44,6 @@ public class Adder {
             carry = adder[0];
             answer[i] = adder[1];
         }
-
 
         return answer;
     }
@@ -59,6 +59,7 @@ public class Adder {
         int relayALength = relayA.length;
         int relayBLength = relayB.length;
 
+        int answerLength;
         if (relayALength > relayBLength) {
             answerLength = relayALength + 1;
         } else if (relayALength < relayBLength) {
