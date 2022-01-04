@@ -18,14 +18,14 @@ public class MissionThree {
         return answer;
     }
 
-    public boolean fullSumOrGate(boolean relayA, boolean relayB, boolean carry) {
+    private boolean fullSumOrGate(boolean relayA, boolean relayB, boolean carry) {
         if (((relayA != relayB) != carry)) {
             return true;
         }
         return false;
     }
 
-    public boolean fullCarryAndGate(boolean relayA, boolean relayB, boolean carry) {
+    private boolean fullCarryAndGate(boolean relayA, boolean relayB, boolean carry) {
         if ((relayA == true) && (relayB == true)) {
             return true;
         } else if (((relayA == true) || (relayB == true)) && (carry == true)) {

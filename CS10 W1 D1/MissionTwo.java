@@ -8,14 +8,14 @@ public class MissionTwo {
         return answer;
     }
 
-    public boolean halfSumXorGate(boolean relayA, boolean relayB) {
+    private boolean halfSumXorGate(boolean relayA, boolean relayB) {
         if ((relayA != relayB)) {
             return true;
         }
         return false;
     }
 
-    public boolean halfCarryAndGate(boolean relayA, boolean relayB) {
+    private boolean halfCarryAndGate(boolean relayA, boolean relayB) {
         if ((relayA == true) && (relayB == true)) {
             return true;
         }
@@ -30,14 +30,14 @@ public class MissionTwo {
     }
 
 
-    public boolean fullSumOrGate(boolean relayA, boolean relayB, boolean carry) {
+    private boolean fullSumOrGate(boolean relayA, boolean relayB, boolean carry) {
         if (((relayA != relayB) != carry)) {
             return true;
         }
         return false;
     }
 
-    public boolean fullCarryAndGate(boolean relayA, boolean relayB, boolean carry) {
+    private boolean fullCarryAndGate(boolean relayA, boolean relayB, boolean carry) {
         if ((relayA == true) && (relayB == true)) {
             return true;
         } else if (((relayA == true) || (relayB == true)) && (carry == true)) {
